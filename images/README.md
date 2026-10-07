@@ -1,0 +1,1 @@
+Wstaw tutaj swoje zdjecie jako `bp-club.jpg`. Strona wyswietli je na gorze.
