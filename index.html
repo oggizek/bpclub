@@ -263,6 +263,60 @@
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
     }
+    /* Celowo krzykliwy, niechlujny wyglad strony. */
+    body {
+      color: #ff00b7;
+      background: #c8ff00;
+      font-family: "Comic Sans MS", cursive;
+    }
+    .topbar { display: none; }
+    .hero {
+      display: flex;
+      min-height: 0;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 12px 30px;
+      color: #ff00b7;
+      background: #ffff00;
+      text-align: center;
+    }
+    .hero::after { display: none; }
+    .hero-image {
+      position: static;
+      display: block;
+      width: min(100%, 1100px);
+      height: 65vh;
+      margin: 0 auto 20px;
+      object-fit: fill;
+    }
+    .hero--empty .hero-image { display: none; }
+    .hero--empty { min-height: 65vh; justify-content: center; }
+    .hero--empty .photo-note {
+      position: static;
+      display: block;
+      border: 5px dotted #ff00b7;
+      color: #ff00b7;
+      transform: none;
+    }
+    .hero-content { width: 100%; }
+    .eyebrow, .hero-bottom { display: none; }
+    h1 {
+      max-width: none;
+      margin: 8px 0 20px;
+      color: #ff0000;
+      font: 700 clamp(34px, 8vw, 82px)/1.1 "Comic Sans MS", cursive;
+      text-shadow: 5px 5px #00ffff;
+      transform: rotate(-2deg);
+    }
+    h1 span { color: #ff0000; }
+    .ticker { background: #ff00b7; color: #ffff00; }
+    .section { padding: 60px 9vw; }
+    .intro, .activities, .join { background: #00ffff; color: #ff00b7; }
+    .activities-head p, .activity p { color: #ff0000; }
+    .activity-list, .activity { border-color: #ff00b7; }
+    .activity-number, .activity-arrow { color: #ff0000; }
+    .join { background: #ff6600; color: #0000ff; }
+    .footer { background: #ff00b7; color: #ffff00; }
   </style>
 </head>
 <body>
@@ -286,7 +340,7 @@
       </div>
       <div class="hero-content">
         <p class="eyebrow">Szkolna ekipa · SP1</p>
-        <h1 id="hero-title">Dobrze<br>być <span>razem.</span></h1>
+        <h1 id="hero-title">Najlepszy klub w SP1<br>jebać foidy</h1>
         <div class="hero-bottom">
           <p class="hero-copy">BP Club to miejsce na dobre pomysły, wspólne akcje i ludzi, z którymi szkoła nabiera kolorów.</p>
           <a class="round-link" href="#o-klubie" aria-label="Przewiń do informacji o klubie">↓</a>
